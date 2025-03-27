@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll-driven Camera with GSAP</title>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap/dist/gsap.min.js"></script>
+    
+</head>
+
+<body>
+
+    <canvas id="bg"></canvas>
+
+
+
+
+    <div id="sidebar">
+        <div class="logo">
+            <h3>YU</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="inner-link active">INTRODUCE</a></li>
+                <li><a href="#work1" class="inner-link">EON COMPANIONS</a></li>
+                <li><a href="#work2" class="inner-link">BOT RIVALRY</a></li>
+                <li><a href="#work3" class="inner-link">OTHER WORK</a></li>
+                <!-- <li><a href="#work4" class="inner-link">work4</a></li> -->
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section id="home" class="active">
+            <div class="container1">
+                <!-- 把原本单独的 card 放到一个 card-container 里，
+           以便在下面再加一个小长方形 card -->
+                <div class="card-container">
+
+                    <!-- 大 card -->
+                    <div class="card big-card">
+                        <div class="content">
+                            <img src="images/Skill/YU.png" alt="person about">
+                        </div>
+                    </div>
+
+                    <!-- 小 card -->
+                    <div class="card small-card">
+                        <div class="content">
+                            <div class="icon-box">
+                                <i class="las la-user"></i>
+                                <p>JINYUHAO</p>
+                            </div>
+                            <div class="icon-box">
+                                <i class="las la-clock"></i>
+                                <p>26</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 文本介绍部分 -->
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>こんにちは、YUです</h2>
+
+                        <p>
+                            独学を通じてメディア制作全般を学び、自分の興味に沿った作品を制作してきました。新しい技術を積極的に習得し、それを表現や制作に活かすことを大切にしています。
+
+                            今後は、これまで培った知識をゲーム分野に応用し、インタラクティブメディアの新たな可能性を探求していきたいと考えています。ポートフォリオをご覧いただきありがとうございます。まだ未熟な点もあるかと思いますが、ご指導のほどよろしくお願いいたします。
+                        </p>
+
+                        <div class="white-box">
+                            <a href="https://work-api-er7v.vercel.app/" target="_blank">API Document</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container2">
+                <!-- 左侧轮播/翻卡区域 -->
+                <div class="box"></div>
+
+                <!-- 右侧文字或其他介绍区 -->
+                <div class="Icando">
+                    <h2>I Can do<br>What?</h2>
+                    <h2 class="dynamic-title">XX</h2>
+
+                </div>
+            </div>
+
+            <div class="container3">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>「Eon Companions」</h2>
+                        <h3>Software Tools:UE Houdini Pycharm Blender</h3>
+                        <p>
+                            星新一賞の可視化プロジェクトに参加した作品です。本作はLAN協力・感情認識・AI対話を融合しています。
+                        </p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <!-- 视频 -->
+                            <iframe 
+                            src="https://www.youtube.com/embed/cPTb4pmFKgc?si=bSwTrFgSaos--Fe2" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container4">
+
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content4">
+                            <!-- 视频 -->
+                            <iframe 
+                            src="https://www.youtube.com/embed/nCtbPXpEseE?si=r0SGw6yjfdggU1wX" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>「Bot Rivalry」</h2>
+                        <h3>Software Tools:UE Blender</h3>
+                        <p>
+                            Steam基盤の対戦型FPS作品です。本作はスキル実装やオンライン同期の最適化に注力しました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container5">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>Other work</h2>
+                        <p>
+                            Houdiniのリアルタイム物理シミュレーション、TouchDesignerのインタラクション、写真、UI/UXを融合した作品シリーズ。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <!-- 视频 -->
+                            <iframe 
+                            src="https://www.youtube.com/embed/Dn1-DBpH4_s?si=6nmuo20bL4OMkIPD" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container6">
+                <div class="card-container">
+                    <div class="Introduce">
+                        <div class="Introduce-content">
+                            <h2>Contact me</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="card small-card">
+                        <div class="content6">
+                            <div class="icon-box">
+                                <i class="las la-mobile"></i>
+                                <p>080-4321-7478</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card small-card">
+                        <div class="content6">
+                            <div class="icon-box">
+                                <i class="las la-envelope"></i>
+                                <p>jinyuhao7478@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========== 这里是示范 #work1 部分 ========== -->
+        <section id="work1">
+
+            <!-- container7：文字在左，卡片在右 -->
+            <div class="container7">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>「Eon Companions」</h2>
+                        <h3>Software Tools:UE Houdini Pycharm Blender</h3>
+                        <p>
+                            星新一賞の可視化プロジェクトに参加した作品です。本作はLAN協力・感情認識・AI対話を融合しています。
+                        </p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <iframe 
+                            src="https://www.youtube.com/embed/cPTb4pmFKgc?si=bSwTrFgSaos--Fe2" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container7 -->
+
+            <!-- container8：文字与卡片居中，上下排列，卡片更大 -->
+            <div class="container8">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>ワークフロー</h2>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="cardX">
+                        <div class="content">
+                            <img src="images/Work1/DataLine.png" alt="person about" loading="eager">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container8 -->
+
+            <!-- container9：文字左，卡片右 -->
+            <div class="container9">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+
+                        <h3>本作では、自身のFine-tuned版を用いた毒舌な対話モデルを構築し、HTTPプロトコルを介してJSON形式でプレイヤーとChatGPTのリアルタイム通信を実現。独特なキャラクター性を持つNPCとの対話を通じて、新たなインタラクションの可能性を探求しました。
+                        </h3>
+
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <iframe 
+                            src="https://www.youtube.com/embed/hTj21Ut5lLs?si=4w_p9ubbfkHlum06" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container9 -->
+
+            <!-- container10：文字 + 大卡片居中，上下排列 -->
+            <div class="container10">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>Chat logic</h2>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="cardX">
+                        <div class="content">
+                            <img src="images/Work1/ChatLogin.png" alt="person about">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container10 -->
+
+            <!-- container11：轮播/翻卡区域 + 文字或介绍 -->
+            <div class="container11">
+                <!-- 左侧 box 轮播组件 -->
+                <div class="box"></div>
+
+                <!-- 右侧介绍文本 -->
+                <div class="Icando">
+                    <h2>Game CG</h2>
+                    <h2 class="dynamic-title">XX</h2>
+                </div>
+            </div><!-- /container11 -->
+
+
+
+
+            <!-- container9：文字左，卡片右 -->
+            <div class="container12">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+
+                        <h3>本作では、プレイヤーの利便性を向上させるため、リスポーン（復活）システムとナビゲーションシステムを構築。よりスムーズなゲーム体験を実現しました。</h3>
+
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <video src="video/Others/A2.mov" class="rounded-video" preload="auto"></video>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container9 -->
+
+            <!-- container9：文字左，卡片右 -->
+            <div class="container13">
+
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <video src="video/Others/A3.mov" class="rounded-video" preload="auto"></video>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Introduce">
+                    <div class="Introduce-content">
+
+                        <h3>本作では、「植物生成」「磁力制御」「グライディング」の3つのスキルを設計し、ネットワーク環境下での安定した動作を実現。プレイヤーのゲーム体験を向上させました。</h3>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- container9：文字左，卡片右 -->
+            <div class="container14">
+
+                <div class="Introduce">
+                    <div class="Introduce-content">
+
+                        <h3>本作では、プレイヤーの表情をリアルタイムで解析し、ゲーム内のインタラクションに活用。Pycharm上で構築した感情認識モデルを用いて、プレイヤーの表情データを取得し、それをUEに送信。ゲーム内のキャラクターに反映させることで、遠隔でも感情を共有できる仕組みを実現しました。これにより、プレイヤーの感情がゲーム体験に影響を与える新たな可能性を探求しています。
+                        </h3>
+
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <video src="video/Others/A4.mov" class="rounded-video" preload="auto"></video>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /container9 -->
+
+            <div class="container15">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>Emotion logic</h2>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="cardX">
+                        <div class="content">
+                            <img src="public/images/Work1/EmotionLogin.png" alt="person about">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container8 -->
+
+        </section><!-- /#work1 -->
+
+
+
+        <section id="work2">
+
+            <!-- container7：文字在左，卡片在右 -->
+            <div class="container16">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>「Bot Rivalry」</h2>
+                        <h3>Software Tools:UE Blender</h3>
+                        <p>
+                            Steam基盤の対戦型FPS作品です。本作はスキル実装やオンライン同期の最適化に注力しました。
+                        </p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <iframe 
+                            src="https://www.youtube.com/embed/nCtbPXpEseE?si=r0SGw6yjfdggU1wX" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container7 -->
+
+            <div class="container17">
+
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <video src="video/Others/B1.mov" class="rounded-video" preload="auto"></video>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>OnlineSubsystem接続</h2>
+                        <!-- <h3>我学过的内容</h3>
+                        <p>
+                            这里是 container7 的文字区域...
+                        </p> -->
+                    </div>
+                </div>
+            </div><!-- /container7 -->
+
+            <!-- container8：文字与卡片居中，上下排列，卡片更大 -->
+            <div class="container18">
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>マルチプレイのロジック</h2>
+
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="cardX">
+                        <div class="content">
+                            <img src="public/images/Work1/MultPlayLogin.png" alt="person about">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /container8 -->
+
+            <!-- container7：文字在左，卡片在右 -->
+            <div class="container19">
+                <!-- 左侧 box 轮播组件 -->
+                <!-- 左侧 box 轮播组件 -->
+                <div class="box"></div>
+
+                <!-- 右侧介绍文本 -->
+                <div class="Icando">
+                    <h2>Game Component</h2>
+                    <h2 class="dynamic-title">XX</h2>
+                </div>
+            </div><!-- /container11 -->
+
+            <!-- <div class="container20">
+
+                    <div class="card-container">
+                        <div class="card big-card">
+                            <div class="content">
+                                <img src="images/Test/B1.png" alt="person about">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Introduce">
+                        <div class="Introduce-content">
+                            <h2>こんにちは、YUです</h2>
+                            <h3>我学过的内容</h3>
+                            <p>
+                                这里是 container7 的文字区域...
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+            <!-- <div class="container21">
+                    <div class="Introduce">
+                        <div class="Introduce-content">
+                            <h2>こんにちは、YUです</h2>
+                            <h3>这里是 container8</h3>
+                            <p>
+                                文字在上、卡片在下，并且卡片尺寸更大...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="card big-card">
+                            <div class="content">
+                                <img src="images/Test/B1.png" alt="person about">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        </section>
+
+
+        <section id="work3">
+
+            <div class="container22">
+
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <iframe 
+                            src="https://www.youtube.com/embed/frthDLR0hAE?si=gVQm5p-J8JGrkH7z" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>「Emotion’s Circulation」</h2>
+                        <h3>Software Tools:Houdini</h3>
+                        <!-- <p>
+                            这里是 container7 的文字区域...
+                        </p> -->
+                    </div>
+                </div>
+            </div><!-- /container7 -->
+
+            <div class="container23">
+
+                <div class="Introduce">
+                    <div class="Introduce-content">
+                        <h2>「Good Omen」</h2>
+                        <h3>Software Tools:TouchDesigner</h3>
+                        <!-- <p>
+                            这里是 container7 的文字区域...
+                        </p> -->
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="card big-card">
+                        <div class="content">
+                            <iframe 
+                            src="https://www.youtube.com/embed/Wj6aTittgmw?si=-SUT9fzBHIONh6u2" 
+                            class="rounded-video"
+                            width="400" 
+                            height="400"
+                            frameborder="0" 
+                            allowfullscreen
+                          ></iframe>
+                            <!-- 播放图标 (Line Awesome 或类似图标库) -->
+                            <i class="las la-play-circle play-icon"></i>
+                            <!-- 全屏提示文字 -->
+                            <div class="fullscreen-hint">ダブルクリックで全画面表示</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /container7 -->
+
+            <div class="container24">
+                <!-- 左侧 box 轮播组件 -->
+                <div class="box"></div>
+
+                <!-- 右侧介绍文本 -->
+                <div class="Icando">
+                    <h2>UI/UX作品</h2>
+                    <!-- <p>这里放一些文字介绍… container11</p> -->
+                </div>
+            </div><!-- /container11 -->
+
+           
+
+
+
+        </section>
+
+
+        <section id="work4"></section>
+    </main>
+
+
+
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
