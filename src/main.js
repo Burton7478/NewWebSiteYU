@@ -338,9 +338,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const data3 = [
 
-    { type: "video", src: "video/Others/B2.mov", width: 440, height: 440,alt: "Card 1", title: "PickUp"}, // 示例视频
-    { type: "video", src: "video/Others/B3.mov", width: 440, height: 440 ,alt: "Card 1", title: "Skill"}, // 示例视频
-    { type: "video", src: "video/Others/B4.mov", width: 440, height: 440 ,alt: "Card 1", title: "Weaapon"}, // 示例视频
+    {   type: "iframe",
+    src: "https://www.youtube.com/embed/lhkDpXYiRuk?si=c04pjRjerRDmS2ga",
+    width: 440,
+    height: 440,
+    alt: "Card 1",
+    title: "PickUp" }, 
+    {   type: "iframe",
+    src: "https://www.youtube.com/embed/KSsgWl9tShI?si=pzxieHVb7GfT4WVb",
+    width: 440,
+    height: 440,
+    alt: "Card 1",
+    title: "Skill" }, 
+    {   type: "iframe",
+    src: "https://www.youtube.com/embed/nHyUW7VVSMo?si=4iEGxsM376z1FJ1s",
+    width: 440,
+    height: 440,
+    alt: "Card 1",
+    title: "Weaapon" }, 
+   
 
   ];
 
